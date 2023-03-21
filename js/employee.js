@@ -24,10 +24,7 @@ function saveEmployee(){
         success: function (data) {
             alert("saved")
             getAllEmployee();
-            $('#exampleFormControlInput1').val('');
-            $('#exampleFormControlInput2').val('');
-            $('#exampleFormControlInput3').val('');
-            $('#exampleFormControlInput4').val('');
+            clearTextField();
         },
 
         error: function (xhr, exception) {
@@ -57,12 +54,9 @@ function updateEmployee(){
         }),
 
         success: function (data) {
-            alert("saved")
+            alert("Updated")
             getAllEmployee();
-            $('#exampleFormControlInput1').val('');
-            $('#exampleFormControlInput2').val('');
-            $('#exampleFormControlInput3').val('');
-            $('#exampleFormControlInput4').val('');
+            clearTextField();
         },
 
         error: function (xhr, exception) {
@@ -81,10 +75,8 @@ function deleteEmployee(){
         success: function (data) {
             alert("Deleted")
             getAllEmployee();
-            $('#exampleFormControlInput1').val('');
-            $('#exampleFormControlInput2').val('');
-            $('#exampleFormControlInput3').val('');
-            $('#exampleFormControlInput4').val('');
+            clearTextField();
+
         },
         error: function (xhr, exception) {
             alert("Error")
@@ -131,4 +123,11 @@ $(document).ready(function () {
 
     })
 })
+function clearTextField(){
+
+    $('#exampleFormControlInput1').val('');
+    $('#exampleFormControlInput2').val('');
+    $('#exampleFormControlInput3').val('');
+    $('#exampleFormControlInput4').val('');
+}
 
